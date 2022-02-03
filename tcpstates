@@ -1,0 +1,27 @@
+#!/bin/bash
+
+echo "<<<app-tcpstates>>>"
+
+## ss -Hant | awk '{print $1}' | sort | uniq -c | sort -n | awk '{print $2 ":" $1}'
+
+ss -Hant | awk '
+BEGIN{
+ STATES["CLOSE-WAIT"]=0;
+ STATES["CLOSED"]=0;
+ STATES["CLOSING"]=0;
+ STATES["ESTAB"]=0;
+ STATES["FIN-WAIT-1"]=0;
+ STATES["FIN-WAIT-2"]=0;
+ STATES["LAST-ACK"]=0;
+ STATES["LISTEN"]=0;
+ STATES["SYN-RECV"]=0;
+ STATES["SYN-SENT"]=0;
+ STATES["TIME-WAIT"]=0;
+}
+
+{ STATES[$1]++ }
+
+END{
+ for (var in STATES) print var ":" STATES[var];
+}
+'
