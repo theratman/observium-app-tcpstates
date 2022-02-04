@@ -27,8 +27,9 @@ if (rrd_is_file($rrd_filename))
     $rrd_list[$i]['filename'] = $rrd_filename;
     $rrd_list[$i]['descr'] = $data['descr'];
     $rrd_list[$i]['ds'] = $ds;
-//    $rrd_list[$i]['colour'] = $data['colour'];
-    $rrd_list[$i]['colour']   = $config['graph_colours'][$colours][$i];
+    $rrd_list[$i]['colour'] = $data['colour'];
+// Want to use Observium default color scheme?
+//    $rrd_list[$i]['colour']   = $config['graph_colours'][$colours][$i];
     $i++;
   }
 } else { echo("file missing: $rrd_filename");  }
