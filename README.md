@@ -2,7 +2,7 @@
 Application (module) for Observium to show TCP Connections States
 
 ## About
-The powerfull monitoring tool [Observium](https://www.observium.org) allows us to create new modules called Applications. Applications are modules designed to collect and display data collected from Linux hosts via the [agent](https://docs.observium.org/unix_agent/). These module use linux command «ss» to collect TCP Connections States, and with the magic of Observium process, store and display the data.
+The powerfull monitoring tool [Observium](https://www.observium.org) allows us to create new modules called Applications. Applications are modules designed to collect and display data collected from Linux hosts via the [agent](https://docs.observium.org/unix_agent/). These module use linux command «ss» to collect TCP Connections States, and with the magic of Observium the data is processed, stored and displayed.
 
 ## Usage
 
