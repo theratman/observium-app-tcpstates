@@ -9,6 +9,6 @@ The powerfull monitoring tool [Observium](https://www.observium.org/) allows us 
 ## Usage
 
 1. On your Observium server copy all the PHP files to the corresponding place, ex. copy the file «[includes/definitions/rrdtypes.inc.php](includes/definitions/rrdtypes.inc.php)» to your ```/{OBSERVIUM_INSTALL_DIRECTORY}/includes/definitions/```. For more information of how to add application check [this page](https://docs.observium.org/developing/add_app/).
-2. On the client server that you want to monitoring copy the unix agent «[observium_agent/scripts-enabled/tcpstates](observium_agent/scripts-enabled/tcpstates)» to ```/usr/lib/observium_agent/scripts-enabled/``` or ```/usr/lib/observium_agent/local/``` depend on your configuration.
+2. On the client that you want to monitoring copy the unix agent «[observium_agent/scripts-enabled/tcpstates](observium_agent/scripts-enabled/tcpstates)» to ```/usr/lib/observium_agent/scripts-enabled/``` or ```/usr/lib/observium_agent/local/``` depend on your configuration.
 
 ## Enjoy!
