@@ -12,9 +12,9 @@ if (!empty($agent_data['app']['tcpstates']))
     $tcpstates_data[trim($item)] = trim($value);
   }
 
-  rrdtool_update_ng($device, 'tcpstates', $tcpstates_data, $app_id);
-
   update_application($app_id, $tcpstates_data);
+
+  rrdtool_update_ng($device, 'tcpstates', $tcpstates_data, $app_id);
 
   unset($app_id,$tcpstates_data);
 }
