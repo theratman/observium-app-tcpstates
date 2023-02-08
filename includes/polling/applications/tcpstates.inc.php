@@ -2,8 +2,6 @@
 
 if (!empty($agent_data['app']['tcpstates']))
 {
-  $tcpstates = $agent_data['app']['tcpstates'];
-
   $app_id = discover_app($device, 'tcpstates');
 
   echo(' tcpstates statistics'.PHP_EOL);
@@ -18,7 +16,7 @@ if (!empty($agent_data['app']['tcpstates']))
 
   update_application($app_id, $tcpstates_data);
 
-  unset($tcpstates,$app_id,$tcpstates_data);
+  unset($app_id,$tcpstates_data);
 }
 
 // EOF
